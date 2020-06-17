@@ -1,0 +1,27 @@
+﻿@model List<ResimList>
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listele</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width:70%;">Resim</th>
+            <th style="width:30%;">Tarih</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ResimList item in Model)
+        {
+        <tr>
+            @*<td style="width:70%;">@item.Path</td>*@
+            <td style="width:70%;"><img width="120" src="@item.Path" /></td>
+            <td style="width:70%;">@item.Tarih</td>
+        </tr>
+        }
+    </tbody>
+</table>
